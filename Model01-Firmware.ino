@@ -195,7 +195,7 @@ KEYMAPS(
   (___,               Key_1,         Key_2,     Key_3,      Key_4, Key_5, Key_PageDown,
    Key_Backtick,      Key_Quote,     Key_Comma, Key_Period, Key_P, Key_Y, Key_Tab,
    Key_Escape,        Key_A,         Key_O,     Key_E,      Key_U, Key_I,
-   Key_LEDEffectNext, Key_Semicolon, Key_Q,     Key_J,      Key_K, Key_X, Key_LeftGui,
+   Key_LeftShift, Key_Semicolon, Key_Q,     Key_J,      Key_K, Key_X, Key_LeftGui,
    Key_LeftControl,   Key_Backspace, Key_LeftAlt, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
@@ -264,18 +264,18 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,          Key_F1,          Key_F2,         Key_F3,     Key_F4,        Key_F5,           Key_End,
-   Key_Tab,      Key_LeftParen,   Key_RightParen, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
-   Key_Enter,     ___,            ___,            Key_Escape, Key_mouseBtnL, Key_mouseWarpNW,
-   Key_CapsLock, Key_PrintScreen, Key_Insert,     ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
-   ___,          Key_Delete,      ___,            ___,
+  (___,               Key_F1,          Key_F2,         Key_F3,     Key_F4,        Key_F5,           Key_End,
+   Key_Tab,           Key_LeftParen,   Key_RightParen, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
+   Key_Enter,         ___,             ___,            Key_Escape, Key_mouseBtnL, Key_mouseWarpNW,
+   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+   ___,               Key_Delete,      ___,            ___,
    ___,
 
-   Key_Home,                Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause, Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                            Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Key_LeftParen,    Key_RightParen,
-   Key_PcApplication,       Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
-   ___,                     ___,                    Key_Enter,                ___,
+   Key_Home,            Key_F6,        Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
+   ___,                 ___,           Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
+                        Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Key_LeftParen,    Key_RightParen,
+   Key_PcApplication,   Consumer_Mute, Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
+   ___,                 ___,           Key_Enter,                ___,
    ___)
 ) // KEYMAPS(
 
