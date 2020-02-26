@@ -264,18 +264,18 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,               Key_F1,          Key_F2,         Key_F3,     Key_F4,        Key_F5,           Key_End,
-   Key_Tab,           Key_LeftParen,   Key_RightParen, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
-   Key_Enter,         ___,             ___,            Key_Escape, Key_mouseBtnL, Key_mouseWarpNW,
-   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+  (___,               Key_F1,          Key_F2,         Key_F3,     Key_F4,  Key_F5, Key_End,
+   Key_Tab,           Key_LeftParen,   Key_RightParen, ___,        ___,     ___,    ___,
+   Key_Enter,         ___,             ___,            Key_Escape, ___,     ___,
+   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,        ___,     ___,    ___,
    ___,               Key_Delete,      ___,            ___,
    ___,
 
    Key_Home,            Key_F6,        Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
    ___,                 ___,           Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
                         Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Key_LeftParen,    Key_RightParen,
-   Key_PcApplication,   ___,           ___,                      ___,                      ___,             Key_Backslash,    Key_Pipe,
-   ___,                 ___,           ___,                ___,
+   ___,                 ___,           ___,                      ___,                      ___,             Key_Backslash,    Key_Pipe,
+   ___,                 ___,           ___,                      ___,
    ___)
 ) // KEYMAPS(
 
