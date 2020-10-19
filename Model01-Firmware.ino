@@ -15,6 +15,7 @@
 
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
+#include "Kaleidoscope-OneShot.h"
 
 // Support for storing the keymap in EEPROM
 #include "Kaleidoscope-EEPROM-Settings.h"
@@ -192,11 +193,11 @@ KEYMAPS(
 #elif defined (PRIMARY_KEYMAP_DVORAK)
 
   [PRIMARY] = KEYMAP_STACKED
-  (___,               Key_1,         Key_2,     Key_3,      Key_4, Key_5, Key_PageDown,
-   Key_Backtick,      Key_Quote,     Key_Comma, Key_Period, Key_P, Key_Y, Key_Tab,
-   Key_Escape,        Key_A,         Key_O,     Key_E,      Key_U, Key_I,
-   Key_LeftShift, Key_Semicolon, Key_Q,     Key_J,      Key_K, Key_X, Key_LeftGui,
-   Key_LeftControl,   Key_Backspace, Key_LeftAlt, Key_LeftShift,
+  (___,               Key_1,         Key_2,        Key_3,      Key_4, Key_5, Key_PageDown,
+   Key_Backtick,      Key_Quote,     Key_Comma,    Key_Period, Key_P, Key_Y, Key_Tab,
+   Key_Escape,        Key_A,         Key_O,        Key_E,      Key_U, Key_I,
+   OSM(LeftShift),    Key_Semicolon, Key_Q,        Key_J,      Key_K, Key_X, OSM(LeftGui),
+   OSM(LeftControl),  Key_Backspace, OSM(LeftAlt), Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
    Key_PageUp,     Key_6, Key_7, Key_8, Key_9, Key_0, LockLayer(NUMPAD),
@@ -264,10 +265,10 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,               Key_F1,          Key_F2,         Key_F3,        Key_F4,  Key_F5, Key_End,
-   Key_Tab,           Key_LeftParen,   Key_RightParen, Key_LeftParen, Key_RightParen,     ___,    ___,
-   Key_Enter,         ___,             ___,            Key_Escape, ___,     ___,
-   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,        ___,     ___,    ___,
+  (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,         Key_F5, Key_End,
+   Key_Tab,           Key_LeftParen,   Key_RightParen, Key_LeftParen,   Key_RightParen, ___,    ___,
+   Key_Enter,         ___,             ___,            Key_Escape,      ___,            ___,
+   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,              ___,           ___,    ___,
    ___,               Key_Delete,      ___,            ___,
    ___,
 
@@ -516,7 +517,10 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // comfortable - or able - to do automatically, but can be useful
   // nevertheless. Such as toggling the key report protocol between Boot (used
   // by BIOSes) and Report (NKRO).
-  USBQuirks
+  USBQuirks,
+
+  // https://github.com/keyboardio/Kaleidoscope/blob/master/docs/plugins/OneShot.md
+  OneShot
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
