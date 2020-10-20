@@ -266,8 +266,8 @@ KEYMAPS(
 
   [FUNCTION] =  KEYMAP_STACKED
   (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,         Key_F5, Key_End,
-   Key_Tab,           Key_LeftParen,   Key_RightParen, Key_LeftParen,   Key_RightParen, ___,    ___,
-   Key_Enter,         ___,             ___,            Key_Escape,      ___,            ___,
+   Key_Tab,           Key_Backslash,   Key_Slash,      Key_LeftParen,   Key_RightParen, ___,    ___,
+   Key_Enter,         ___,             Key_DownArrow,  Key_LeftArrow,   Key_RightArrow, Key_UpArrow,
    Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,              ___,           ___,    ___,
    ___,               Key_Delete,      ___,            ___,
    ___,
