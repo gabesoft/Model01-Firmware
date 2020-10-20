@@ -16,6 +16,7 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 #include "Kaleidoscope-OneShot.h"
+#include <Kaleidoscope-LED-ActiveModColor.h>
 
 // Support for storing the keymap in EEPROM
 #include "Kaleidoscope-EEPROM-Settings.h"
@@ -520,7 +521,11 @@ KALEIDOSCOPE_INIT_PLUGINS(
   USBQuirks,
 
   // https://github.com/keyboardio/Kaleidoscope/blob/master/docs/plugins/OneShot.md
-  OneShot
+  OneShot,
+
+  // https://github.com/keyboardio/Kaleidoscope/blob/master/docs/plugins/LED-ActiveModColor.md
+  LEDControl,
+  ActiveModColorEffect
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
@@ -567,6 +572,8 @@ void setup() {
   // maps for. To make things simple, we set it to five layers, which is how
   // many editable layers we have (see above).
   ColormapEffect.max_layers(5);
+
+  ActiveModColorEffect.highlight_color = CRGB(0x00, 0xff, 0xff);
 }
 
 /** loop is the second of the standard Arduino sketch functions.
