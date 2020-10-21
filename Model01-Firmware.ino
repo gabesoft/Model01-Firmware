@@ -194,19 +194,19 @@ KEYMAPS(
 #elif defined (PRIMARY_KEYMAP_DVORAK)
 
   [PRIMARY] = KEYMAP_STACKED
-  (___,               Key_1,         Key_2,        Key_3,      Key_4, Key_5, Key_PageDown,
-   Key_Backtick,      Key_Quote,     Key_Comma,    Key_Period, Key_P, Key_Y, Key_Tab,
-   Key_Escape,        Key_A,         Key_O,        Key_E,      Key_U, Key_I,
-   OSM(LeftShift),    Key_Semicolon, Key_Q,        Key_J,      Key_K, Key_X, OSM(LeftGui),
-   OSM(LeftControl),  Key_Backspace, OSM(LeftAlt), OSM(LeftShift),
+  (___,              Key_1,         Key_2,        Key_3,      Key_4, Key_5, Key_PageDown,
+   Key_Backtick,     Key_Quote,     Key_Comma,    Key_Period, Key_P, Key_Y, Key_Tab,
+   Key_Escape,       Key_A,         Key_O,        Key_E,      Key_U, Key_I,
+   Key_LeftShift,    Key_Semicolon, Key_Q,        Key_J,      Key_K, Key_X, Key_LeftGui,
+   Key_LeftControl,  Key_Backspace, Key_LeftAlt, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
    Key_PageUp,     Key_6, Key_7, Key_8, Key_9, Key_0, LockLayer(NUMPAD),
    Key_Enter,      Key_F, Key_G, Key_C, Key_R, Key_L, Key_Slash,
                    Key_D, Key_H, Key_T, Key_N, Key_S, Key_Minus,
-   Key_RightGui,   Key_B, Key_M, Key_W, Key_V, Key_Z, Key_Equals,
-   Key_RightShift, Key_RightAlt, Key_Spacebar, Key_RightControl,
-   ShiftToLayer(FUNCTION)),
+   OSM(RightGui),  Key_B, Key_M, Key_W, Key_V, Key_Z, Key_Equals,
+   OSM(RightShift),OSM(RightAlt),Key_Spacebar, OSM(RightControl),
+   OSL(FUNCTION)),
 
 #elif defined (PRIMARY_KEYMAP_COLEMAK)
 
