@@ -267,7 +267,7 @@ KEYMAPS(
 
   [FUNCTION] =  KEYMAP_STACKED
   (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,         Key_F5, Key_End,
-   Key_Tab,           Key_Backslash,   Key_Slash,      Key_LeftParen,   Key_RightParen, ___,    ___,
+   Key_Tab,           Key_Backslash,   Key_Slash,      Key_RightParen,  Key_LeftParen,  ___,    ___,
    Key_Enter,         ___,             Key_DownArrow,  Key_LeftArrow,   Key_RightArrow, Key_UpArrow,
    Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,              ___,           ___,    ___,
    ___,               Key_Delete,      ___,            ___,
@@ -458,6 +458,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   HardwareTestMode,
 
   // LEDControl provides support for other LED modes
+  // https://github.com/keyboardio/Kaleidoscope/blob/master/docs/plugins/LEDControl.md
   LEDControl,
 
   // We start with the LED effect that turns off all the LEDs.
@@ -524,7 +525,6 @@ KALEIDOSCOPE_INIT_PLUGINS(
   OneShot,
 
   // https://github.com/keyboardio/Kaleidoscope/blob/master/docs/plugins/LED-ActiveModColor.md
-  LEDControl,
   ActiveModColorEffect
 );
 
@@ -573,7 +573,8 @@ void setup() {
   // many editable layers we have (see above).
   ColormapEffect.max_layers(5);
 
-  ActiveModColorEffect.highlight_color = CRGB(0x00, 0xff, 0xff);
+  ActiveModColorEffect.highlight_color = CRGB(0x00, 0x4C, 0x99);
+  ActiveModColorEffect.highlightNormalModifiers(false);
 }
 
 /** loop is the second of the standard Arduino sketch functions.
