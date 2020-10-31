@@ -91,7 +91,10 @@
   */
 
 enum { MACRO_VERSION_INFO,
-       MACRO_ANY
+       MACRO_ANY,
+       MACRO_DOUBLE_QUOTE,
+       MACRO_PLUS,
+       MACRO_QUESTION
      };
 
 
@@ -266,16 +269,16 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,         Key_F5, Key_End,
-   Key_Tab,           Key_Backslash,   Key_Slash,      Key_RightParen,  Key_LeftParen,  ___,    ___,
-   Key_Enter,         ___,             Key_DownArrow,  Key_LeftArrow,   Key_RightArrow, Key_UpArrow,
-   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,              ___,           ___,    ___,
+  (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,                Key_F5, Key_End,
+   Key_Tab,           Key_Backslash,   Key_Slash,      Key_RightParen,  Key_LeftParen,         ___,    ___,
+   Key_Enter,         Key_Backtick,    M(MACRO_PLUS),  Key_Equals,      M(MACRO_DOUBLE_QUOTE), Key_Quote,
+   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,             ___,           ___,    ___,
    ___,               Key_Delete,      ___,            ___,
    ___,
 
    Key_Home,            Key_F6,        Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
    ___,                 ___,           Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                        Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
+                        Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  M(MACRO_QUESTION),___,
    ___,                 ___,           ___,                      ___,                      ___,             Key_Backslash,    Key_Pipe,
    ___,                 ___,           ___,                      ___,
    ___)
@@ -339,6 +342,25 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case MACRO_ANY:
     anyKeyMacro(keyState);
     break;
+
+  case MACRO_DOUBLE_QUOTE:
+    if (keyToggledOn(keyState)) {
+        return Macros.type(PSTR("\""));
+    }
+    break;
+
+  case MACRO_PLUS:
+    if (keyToggledOn(keyState)) {
+        return Macros.type(PSTR("+"));
+    }
+    break;
+
+  case MACRO_QUESTION:
+    if (keyToggledOn(keyState)) {
+        return Macros.type(PSTR("?"));
+    }
+    break;
+
   }
   return MACRO_NONE;
 }
