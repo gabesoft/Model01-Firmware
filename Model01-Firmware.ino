@@ -269,16 +269,16 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,               Key_F1,          Key_F2,         Key_F3,          Key_F4,                Key_F5, Key_End,
-   Key_Tab,           Key_Backslash,   Key_Slash,      Key_RightParen,  Key_LeftParen,         ___,    ___,
-   Key_Enter,         Key_Backtick,    M(MACRO_PLUS),  Key_Equals,      M(MACRO_DOUBLE_QUOTE), Key_Quote,
-   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,     ___,             ___,           ___,    ___,
-   ___,               Key_Delete,      ___,            ___,
+  (___,               Key_F1,          Key_F2,             Key_F3,          Key_F4,            Key_F5, Key_End,
+   Key_Tab,           Key_Backslash,   Key_Slash,          Key_RightParen,  Key_LeftParen,     ___,    ___,
+   Key_Enter,         Key_Backtick,    LSHIFT(Key_Equals), Key_Equals,      LSHIFT(Key_Quote), Key_Quote,
+   Key_LEDEffectNext, Key_PrintScreen, Key_Insert,         ___,             ___,               ___,    ___,
+   ___,               Key_Delete,      ___,                ___,
    ___,
 
    Key_Home,            Key_F6,        Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
    ___,                 ___,           Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                        Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  M(MACRO_QUESTION),___,
+                        Key_LeftArrow, Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  LSHIFT(Key_Slash),___,
    ___,                 ___,           ___,                      ___,                      ___,             Key_Backslash,    Key_Pipe,
    ___,                 ___,           ___,                      ___,
    ___)
